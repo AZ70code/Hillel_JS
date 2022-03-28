@@ -32,8 +32,10 @@ formEl.addEventListener("submit", (e) => {
 			status,
 		});
 //=== Homework =================
-		task = task + 1;
-		if(task == 1) {
+		if(status == 'completed'){
+			task = task +1;
+		}
+		if(!tableFoot) {
 			tableFoot=document.createElement("tfoot");
 			tableBodyEl.after(tableFoot);
 		}
@@ -115,14 +117,20 @@ function createRemoveButton() {
 
 	function handleClickRemoveButton(e) {
 		buttonEl.removeEventListener("click", handleClickRemoveButton);
-//=== Homework - task2 =================
-		e.target.parentNode.parentNode.innerHTML = '';
+
 //=== Homework - task3 =================
-		task = task - 1;
-		if(task == 0) {
+	if(e.target.parentNode.previousElementSibling.innerText =='completed'){
+		task = task -1;
+	}
+	taskCounter(task, tableFoot);
+
+//=== Homework - task2 =================
+	e.target.parentNode.parentNode.remove();
+	if(tableBodyEl.children.length == 0) {
 			tableFoot.remove();
+			tableFoot = 0;
 		}
-		taskCounter(task, tableFoot);
+
 // =============================================
 	}
 	buttonEl.addEventListener("click", handleClickRemoveButton);
@@ -131,9 +139,9 @@ function createRemoveButton() {
 //=== Homework - task3 =================
 
 function taskCounter(n, row) {
-	let count={};
-	let key = 'Completed tasks';
-	count[key] = n;
-	row.innerText = key +':' +`${n}`;
+		let count={};
+		let key = 'Completed tasks';
+		count[key] = n;
+		row.innerText = key +':' +`${n}`;
 }
 
