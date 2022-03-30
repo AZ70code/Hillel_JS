@@ -8,8 +8,8 @@ function makeString(str) {
     }
     return addStr;
 }
-// makeString('Hello')('world') // --> 'Hello world'
-// makeString('Test')('super')('test') // --> 'Test super test'
+makeString('Hello')('world') // --> 'Hello world'
+makeString('Test')('super')('test') // --> 'Test super test'
 
 //== task 2 ================================================
 
@@ -24,25 +24,19 @@ const person = {
 
 function guard(obj) {
     let fn = obj.makeRequest;
-    const cache = new Map();
 
-    function f() {
-       let userData = {};
+    return function() {
+       const userData = {};
        let age = (new Date().getFullYear()) - this.dob;
-       if (cache.has(userData)) {
-           return cache.get(userData);
-         }
          userData.name =  this.name;
          userData.age =  age;
          if(age>= 18) fn();
          else alert('You are so young');
 
-         cache.set( userData);
          return userData;
     };
-    return f;
+   
 }
 person.makeRequest = guard(person);
-console.log(person.makeRequest())
-
+console.log(person.makeRequest());
 
