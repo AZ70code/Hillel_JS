@@ -6,51 +6,44 @@ const Shape = {
         if (!Array.isArray(value)) {
                 throw new Error("Value should be array");
             }
-            const [width, height] = value;
-            this.width = width;
-            this.height = height;
-    },
-    get squareSquare() {
-        return `${this.width}`**2;
-    },
-    get squareRectangle() {
-        return `${this.width}` * `${this.height}`;
-    },
-    get squareCircle() {
-        return Math.floor(Math.PI * (`${this.width}`/2) **2);
+        const [width, height] = value;
+        this.width = width;
+        this.height = height;
     }
 }
 
 function Square(w) {
-    this.height = this.width = w;
     Shape.square = [w];
-    console.log(this.squareSquare);
+    this.squareSquare = function () {
+        return `${this.width}`**2;
+    }
 }
 Square.prototype = Shape;
 
 
 function Rectangle(w, h) {
-    this.width = w;
-    this.height = h;
     Shape.square = [w, h];
-    console.log(this.squareRectangle);
+    this.squareRectangle = function() {
+        return `${this.width}` * `${this.height}`;
+    }
 }
 Rectangle.prototype = Shape;
 
 function Circle(d) {
-    this.height = this.width = d;
     Shape.square = [d];
-    console.log(this.squareCircle);
+    this.squareCircle = function() {
+        return Math.floor(Math.PI * (`${this.width}`/2) **2);
+    }
 }
 Circle.prototype = Shape;
 
 
 
 let newSquare = new Square(40);
-console.log(newSquare);
+console.log(newSquare.squareSquare());
 
-let newRectangle = new Rectangle(40,30);
-console.log(newRectangle);
+let newRectangle = new Rectangle(50,20);
+console.log(newRectangle.squareRectangle());
 
 let newCircle = new Circle(30);
-console.log(newCircle);
+console.log(newCircle.squareCircle());
