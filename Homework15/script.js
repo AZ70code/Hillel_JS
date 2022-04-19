@@ -1,23 +1,17 @@
 function createAsyncList(iterations) {
     const data = [];
-    let count = 0;
 
-    function objCreation(n) {
+    function dataCreation(n) {
         let obj = {};
-        obj.massage = 'Current iteration'+' '+`${n}`;
-        return obj;
-    }
-    
-    return new Promise((resolve, reject) => {
-       let intervalId = setInterval(() => {
-            count++;
-            if(count == iterations){
-                clearInterval(intervalId);
-              };
-            obj = objCreation(count);
-            console.log(obj);
+        if(n>0){
+            obj.massage = 'Current iteration'+' '+`${n}`;
+            dataCreation(n-1);
             data.push(obj);
-        }, 1000);
+        } else return;
+    }
+
+    return new Promise(resolve => {
+        dataCreation(iterations);
         resolve(data);
     })
 }
