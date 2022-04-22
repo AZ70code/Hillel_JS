@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>JS: Galley App (RESTful API)</title>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/index.min.css" />
+		<script src="https://cdn.tailwindcss.com"></script>
+		<script>
+		  tailwind.config = {
+			theme: {
+			  extend: {
+				fontFamily: {
+				  sans: ['Lato', 'sans-serif'],
+				},
+			  }
+			}
+		  }
+		</script>
+	</head>
+	<body>
+		<div class="container mx-auto">
+			<div class="mt-10">
+				<div class="md:grid md:grid-cols-2 md:gap-10">
+					<div class="mt-5 md:mt-0">
+						<form action="#" method="POST" id="form" class="h-full">
+							<div class="shadow-lg border overflow-hidden sm:rounded-md h-full">
+								<div class="px-4 py-5 bg-white sm:p-6">
+									<div class="col-span-6 sm:col-span-3">
+										<label for="sprite" class="block text-xl font-bold text-gray-700">Sprite</label>
+										<select id="sprite" name="sprite" class="mt-5 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-l ">
+											<option value="male">Male</option>
+											<option value="female">Female</option>
+											<option value="human">Human</option>
+											<option value="identicon">Identicon</option>
+											<option value="initials">Initials</option>
+											<option value="bottts">Bottts</option>
+											<option value="avataaars">Avataaars</option>
+											<option value="jdenticon">Jdenticon</option>
+											<option value="gridy">Gridy</option>
+											<option value="micah">Micah</option>
+										</select>
+									</div>
+									<div class="grid grid-cols-6 gap-6">
+										<div class="col-span-6 sm:col-span-5">
+											<label for="seed" class="block text-xl font-bold text-gray-700 mt-5">Seed</label>
+											<input type="text" name="seed" id="seed" class="mt-5 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm px-4 border border-gray-300 rounded-md leading-8">
+										</div>
+										<div class="col-span-6 sm:col-span-1">
+											<label for="color" class="block text-xl font-bold text-gray-700 mt-5">Color</label>
+											<input type="color" name="color" id="color" class="mt-5 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm h-9 px-1 border border-gray-300 rounded-md">
+										</div>
+									</div>
+								</div>
+								<div class="px-4 py-3 bg-gray-50 text-right sm:px-6">
+									<button type="button" class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-m font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">download</button>
+								</div>
+							</div>
+						</form>
+					</div>
+					<div class="shadow-lg border overflow-hidden sm:rounded-md">
+						<div class="mt-5 md:mt-0" id="preview">
+							<img class="max-w-xs block mx-auto" id="avatar" src="https://avatars.dicebear.com/api/male/:seed.svg" alt="">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/index.min.js"></script>
+		<script src="./script.js"></script>
+	</body>
+</html>
