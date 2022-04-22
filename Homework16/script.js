@@ -14,7 +14,7 @@ function changePreView(){
 
 //получаем картинку при клике на кнопку
 button.onclick = () => {
-  getAvatar()
+  getAvatar();
 }
 
 function createPath() {
@@ -32,14 +32,8 @@ async function getAvatar() {
   const url = preView();
   const response = await fetch(url);
   const blob = await response.blob();
-  const img = document.createElement('img');
-  img.style = 'position:absolute;top:50px;left:50%;transform:translate(-50%);width:600px';
-  document.body.append(img);
-  img.src = URL.createObjectURL(blob);
-  //удаляем картинку при клике
-  setTimeout(() => {
-    document.addEventListener('click', ()=> {
-      img.remove();
-    });
-  },0)
+  const avatar = document.createElement('a');
+  avatar.href = window.URL.createObjectURL(blob);
+  avatar.download = "Avatar";
+  avatar.click();
 }
