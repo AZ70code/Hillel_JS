@@ -1,0 +1,42 @@
+.header {
+    width: 100%;
+    &__wrapper {
+        height: 135px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    
+    }
+    &__logo {
+        margin-right: 120px;
+    }
+    &__menu {
+        flex: 1 1 auto;
+    }
+    &__list {
+        display: flex;
+    }
+    &__item {
+        margin-right: 40px;
+        position: relative;
+        cursor: pointer;
+        &::before {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background-color: #F063B8;
+            left: 0;
+            bottom: -5px;
+            transition: all 0.5s ease;
+        }
+        &:hover {
+            color: #F063B8;
+            &::before{
+                width: 100%;
+            }
+        }
+    }
+}
+
+  

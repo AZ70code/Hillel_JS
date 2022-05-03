@@ -1,0 +1,102 @@
+html
+  head
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    title Main
+    link(rel="stylesheet", href="./css/main.min.css?cache_bust=123")
+  body
+    div(class='wrapper')
+      include templates/header.pug
+      main
+        section(class='headline')
+          div(class='container')
+            div(class='headline__content')
+              h1(class='title') Save your data storage here.
+              p(class='text') Data Warehouse is a data storage area that has been tested for security, so you can store your data here safely but not be afraid of being stolen by others.
+        div(class='container')
+          section(class='about')
+            div(class='about__image')
+              img(src='assets/images/about.png' alt='')
+            div(class='about__content')
+              h2(class='about__title title') We are a high-level data storage bank
+              p(class='about__text text') The place to store various data that you can access at any time through the internet  and where you can carry it. This very flexible storage area has a high level of security. To enter into your own data you must enter the password that you created when you registered in this Data Warehouse.
+          section(class='features')
+            h2(class='features__title title') Features
+            p(class='features__subtitle text') Some of the features and advantages that we provide for those of you who store data in this Data Warehouse.
+            div(class='features__content')
+              article(class='features__card card card--blue1')
+                div(class='card__image')
+                  img(src='assets/images/features/features01.png' alt='')
+                div(class='card__content')
+                  h3(class='card__title') Search Data
+                  p(class='card__text') Don’t worry if your data is very large, the Data Warehoue provides a search engine, which is useful for making it easier to find data effectively saving time.
+                  a(href='#' class='card__button') Learn more
+                    img(src='assets/images/arrow.png')
+              article(class='features__card card card--grey')
+                div(class='card__image')
+                  img(src='assets/images/features/features02.png' alt='')
+                div(class='card__content')
+                  h3(class='card__title') 24 Hours Access
+                  p(class='card__text') Access is given 24 hours a full morning to night and meet again in the morning, giving you comfort when you need data when urgent.
+                  a(href='#' class='card__button') Learn more
+                    img(src='assets/images/arrow.png')
+              article(class='features__card card card--pink')
+                div(class='card__image')
+                  img(src='assets/images/features/features03.png' alt='')
+                div(class='card__content')
+                  h3(class='card__title') Print Out
+                  p(class='card__text') Print out service gives you convenience if someday you need print data, just edit it all and just print it.
+                  a(href='#' class='card__button') Learn more
+                    img(src='../assets/images/arrow.png')
+              article(class='features__card card card--blue2')
+                div(class='card__image')
+                  img(src='assets/images/features/features04.png' alt='')
+                div(class='card__content')
+                  h3(class='card__title') Security Code
+                  p(class='card__text') Data Security is one of our best facilities. Allows for your files to be safer. The file can be secured with a code or password that you created, so only you can open the file.
+                  a(href='#' class='card__button') Learn more
+                    img(src='assets/images/arrow.png')
+          section(class='testimonials')
+            div(class='testimonials__wrapper')
+              h2(class='testimonials__title title') Testimonials
+              div(class='testimonials__slider')
+                div(class='testimonials__slider-body swiper')
+                  div(class='swiper-wrapper')
+                    div(class='swiper-slide')
+                      div(class='swiper-slide__body')
+                        div(class='swiper-slide__image')
+                          img(src="assets/images/slider/slide_img01.jpg", alt="")
+                        div(class='swiper-slide__content')
+                          h4(class='swiper-slide__title') John Fang 
+                          h5(class='swiper-slide__info') wordfaang.com
+                          p(class='swiper-slide__text') Suspendisse ultrices at diam lectus nullam. Nisl, sagittis viverra enim erat tortor ultricies massa turpis. Arcu pulvinar aenean nam laoreet nulla.
+                    div(class='swiper-slide')
+                      div(class='swiper-slide__body')
+                        div(class='swiper-slide__image')
+                          img(src="assets/images/slider/slide_img02.png", alt="")
+                        div(class='swiper-slide__content')
+                          h4(class='swiper-slide__title') Jeny Doe 
+                          h5(class='swiper-slide__info') UX Engineer
+                          p(class='swiper-slide__text')  Suspendisse ultrices at diam lectus nullam. Nisl, sagittis viverra enim erat tortor ultricies massa turpis. Arcu pulvinar aenean nam laoreet nulla.
+                    div(class='swiper-slide')
+                      div(class='swiper-slide__body')
+                        div(class='swiper-slide__image')
+                          img(src="assets/images/slider/slide_img03.png", alt="")
+                        div(class='swiper-slide__content')
+                          h4(class='swiper-slide__title') Chang Dou 
+                          h5(class='swiper-slide__info') WEB Developer
+                          p(class='swiper-slide__text')  Suspendisse ultrices at diam lectus nullam. Nisl, sagittis viverra enim erat tortor ultricies massa turpis. Arcu pulvinar aenean nam laoreet nulla.
+                    div(class='swiper-slide')
+                      div(class='swiper-slide__body')
+                        div(class='swiper-slide__image')
+                          img(src="assets/images/slider/slide_img01.jpg", alt="")
+                        div(class='swiper-slide__content')
+                          h4(class='swiper-slide__title') John Fang 
+                          h5(class='swiper-slide__info') wordfaang.com
+                          p(class='swiper-slide__text')  Suspendisse ultrices at diam lectus nullam. Nisl, sagittis viverra enim erat tortor ultricies massa turpis. Arcu pulvinar aenean nam laoreet nulla.
+              div(class='swiper-control control')
+                div(class='control__pagination')
+                div(class='control__navigation')
+                  button(class='control__arrow control__arrow--prev')
+                  button(class='control__arrow control__arrow--next')
+    include templates/footer.pug
+    script(src='/js/main.min.js?cache_bust=123')

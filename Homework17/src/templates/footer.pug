@@ -1,0 +1,48 @@
+footer(class='footer')
+    div(class='container')
+        div(class='footer__top footer-top')
+            div(class='footer-top__tagline')
+                h2(class='footer-top__title title') Try for free!
+                p(class='footer-top__subtitle text') Get limited 1 week free try our features!
+            div(class='footer-top__buttons')
+                button(class='footer-top__button btn btn--pink') Learn more
+                button(class='footer-top__button btn btn--white') Request Demo
+        div(class='footer__middle footer-middle')
+            div(class='footer-middle_info middle-info')
+                div(class='middle-info__header')
+                    div(class='middle-info__logo logo')
+                    h3(class='middle-info__title') DataWarehouse
+                div(class='middle-info__address') Warehouse Society, 234 <br> Bahagia Ave Street PRBW 29281
+                div(class='middle-info__contact')
+                    a(href='mailto:info@warehouse.project') info@warehouse.project
+                    a(href='tel:12323434') 1-232-3434 (Main)
+            div
+                h3(class='footer-middle__title') About
+                ul(class='footer-middle__list')
+                    - var menu = ['Profile', 'Features', 'Careers', 'DW News']
+                        each item in menu 
+                            li
+                                a(href='#')=item
+            div
+                h3(class='footer-middle__title') Help
+                ul(class='footer-middle__list')
+                    - var menu = ['Support', 'Sign up', 'Guide', 'Reports', 'Q&A']
+                        each item in menu 
+                            li
+                                a(href='#')=item
+            div
+                h3(class='footer-middle__title') Social Media
+                ul(class='middle-info__social')
+                    li(class='middle-info__item icon')
+                        a(href="#" class='middle-info__link')
+                            img(src="assets/images/icon/facebook.svg", alt="")
+                    li(class='middle-info__item icon')
+                        a(href="#" class='middle-info__link')
+                            img(src="assets/images/icon/twitter.svg", alt="")
+                    li(class='middle-info__item icon')
+                        a(href="#" class='middle-info__link')
+                            img(src="assets/images/icon/instagram.svg", alt="")
+        div(class='footer__bottom footer-bottom')
+            div(class='footer-bottom__copyright') © Datawarehouse™, 2020. All rights reserved. <br> Company Registration Number: 21479524.
+            a(class='footer-bottom__chat icon')
+                img(src="assets/images/icon/chat.png", alt="")
