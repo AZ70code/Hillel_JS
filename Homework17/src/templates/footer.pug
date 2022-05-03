@@ -33,15 +33,11 @@ footer(class='footer')
             div
                 h3(class='footer-middle__title') Social Media
                 ul(class='middle-info__social')
-                    li(class='middle-info__item icon')
-                        a(href="#" class='middle-info__link')
-                            img(src="assets/images/icon/facebook.svg", alt="")
-                    li(class='middle-info__item icon')
-                        a(href="#" class='middle-info__link')
-                            img(src="assets/images/icon/twitter.svg", alt="")
-                    li(class='middle-info__item icon')
-                        a(href="#" class='middle-info__link')
-                            img(src="assets/images/icon/instagram.svg", alt="")
+                    - var menu = ['facebook.svg', 'twitter.svg', 'instagram.svg']
+                        each item in menu 
+                            li(class='middle-info__item icon')
+                                a(href='#' class='middle-info__link')
+                                    img(src="assets/images/icon/"+item alt="")
         div(class='footer__bottom footer-bottom')
             div(class='footer-bottom__copyright') © Datawarehouse™, 2020. All rights reserved. <br> Company Registration Number: 21479524.
             a(class='footer-bottom__chat icon')
