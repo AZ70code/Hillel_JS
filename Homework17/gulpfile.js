@@ -12,6 +12,8 @@ const webpack = require('webpack-stream');
 const fileinclude = require('gulp-file-include');
 const pug = require('gulp-pug');
 const browserSync = require('browser-sync');
+const imagemin = require('gulp-imagemin');
+const webp = require('gulp-webp');
 
 const isProd = process.env.NODE_ENV === 'production';
 
@@ -62,7 +64,16 @@ function bundlePug() {
 
 function optimizeImages() {
   return src(`${path.images.src}**/*.*`)
-    .pipe(dest(path.images.dest))
+  .pipe(
+    imagemin({
+      progressive: true,
+      svgoPlugins: [{ removeViewBox: false }],
+      interlaced: true,
+      optimizationLevel: 3 
+    })
+  )
+  .pipe(dest(path.images.dest))
+
 }
 
 function compileStyles() {
