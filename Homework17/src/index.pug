@@ -2,7 +2,7 @@ html
   head
     meta(name="viewport" content="width=device-width, initial-scale=1.0")
     title Main
-    link(rel="stylesheet", href="./css/main.min.css?cache_bust=123")
+    link(rel="stylesheet" href="./css/main.min.css?cache_bust=123")
   body
     div(class='wrapper')
       include templates/header.pug
@@ -46,7 +46,7 @@ html
                   h3(class='card__title') Print Out
                   p(class='card__text') Print out service gives you convenience if someday you need print data, just edit it all and just print it.
                   a(href='#' class='card__button') Learn more
-                    img(src='../assets/images/arrow.png')
+                    img(src='assets/images/arrow.png')
               article(class='features__card card card--blue2')
                 div(class='card__image')
                   img(src='assets/images/features/features04.png' alt='')
@@ -99,4 +99,4 @@ html
                   button(class='control__arrow control__arrow--prev')
                   button(class='control__arrow control__arrow--next')
     include templates/footer.pug
-    script(src='/js/main.min.js?cache_bust=123')
+    script(src='./js/main.min.js?cache_bust=123')
