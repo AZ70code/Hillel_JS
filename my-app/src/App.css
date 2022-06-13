@@ -1,0 +1,10 @@
+.App {
+  padding: 10px;
+}
+
+td[data-cell="data"] {
+  cursor: pointer;
+}
+td[data-cell="data"]:hover {
+  background-color: #e3ecf1;
+}
