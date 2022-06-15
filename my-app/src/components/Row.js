@@ -28,7 +28,7 @@ export default class Row extends React.Component {
 				{this.state.data.map((item) => (
 					<tr className=" relative border-b" key={item.id}>
 						<td className="p-4 whitespace-nowrap text-sm font-medium text-gray-900">
-							{item.createdAt}
+							{item.id}
 						</td>
 						<Cell
 							name="name"
@@ -49,7 +49,7 @@ export default class Row extends React.Component {
 							onSave={this.handleChange}
 						/>
 						<td className="p-4 whitespace-nowrap text-sm font-medium text-gray-900">
-							{item.id}
+							{item.createdAt}
 						</td>
 					</tr>
 				))}

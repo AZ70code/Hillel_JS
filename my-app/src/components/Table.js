@@ -28,11 +28,11 @@ export default class Table extends React.Component {
 	// }
 	
 	tableHeader = () => {
-		let header = Object.keys(this.state.data[0])
-		return header.map((key, index) => {
-		   return <th className='p-4 font-medium' key={index}>{key.toUpperCase()}</th>
+		const header =  ['id', 'name', 'description', 'price', 'created At'] ;
+		return header.map((item) => {
+			return <th className='p-4 font-medium' key={item.id}>{item.toUpperCase()}</th>
 		})
-	 }
+	}
   
 	render() {
 		return (

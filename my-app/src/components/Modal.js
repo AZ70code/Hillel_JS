@@ -30,7 +30,7 @@ export default class Modal extends React.Component {
         return (
             <>
                 {this.props.show && (
-                    <form onSubmit={this.handleSubmit} className=" modal flex justify-between min-w-max p-3 gap-2  bg-slate-100 absolute top-0 right-0 z-10">
+                    <form onSubmit={this.handleSubmit} className=" modal flex justify-between min-w-max p-3 gap-2  bg-slate-100 absolute top-0 inset-x-auto z-10">
                         <input 
                         value = {this.state.value}
                         onChange = {this.handleFieldChange}
